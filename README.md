@@ -18,3 +18,12 @@
 
 
 ## 參考資料  
+
+https://xgboost.readthedocs.io/en/latest/parameter.html
+
+https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/
+
+https://www.kaggle.com/dlarionov/feature-engineering-xgboost
+
+https://www.kaggle.com/zhangyunsheng/xgboost/comments
+
