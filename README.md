@@ -31,7 +31,7 @@ model參數
 圖*2+result+importance
 
 ###Test (submission.csv)  
-對第35個月做predict,並把結果輸出 submission.csv
+對第35個月做prediction,並把結果輸出 submission.csv
 圖*1
   
 
