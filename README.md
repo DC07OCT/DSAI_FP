@@ -6,16 +6,19 @@
 ### 把資料集放進來  (六個檔案) 
 dataset + input_data.csv+model+submission.csv
 ### 建環境(pipenv)  
-在 cmd中執行
+在 cmd中執行  
+
     cd [目標資料夾]
-輸入
-    pipenv shell
-### 執行 data preprocess (寫成指令)   
 輸入  
+
+    pipenv shell
+### 執行 data preprocess  
+輸入    
+
     python DSAI_FP_PredFuture_preprocess.py
-### 執行 train(寫成指令)  
+### 執行 train 
     python DSAI_FP_PredFuture_train.py
-### 執行test 得到submission.csv(寫成指令)  
+### 執行test 得到submission.csv  
     python DSAI_FP_PredFuture_test.py
 
  
