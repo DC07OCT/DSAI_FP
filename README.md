@@ -1,13 +1,18 @@
 # DSAI_FP(Kaggle Predict Future Sales)   
-## google Slide 連結 
+### [google Slide 連結(Presentatio用)]() 
+### [google doc(詳細過程)]()
 
 ##  如何執行  
-### 把資料集放進來  (六個檔案)
+### 把資料集放進來  (六個檔案) 
+dataset + inputdata+model+submission
 ### 建環境(pipenv)  
 進入 shell  
 ### 執行 data preprocess (寫成指令)  
+py檔
 ### 執行 train(寫成指令)  
+py檔
 ### 執行test 得到submission.csv(寫成指令)  
+py檔
 
  
  
@@ -18,7 +23,7 @@
 增加不同滯後shift
 調模型參數(sampling)
 藉由importance 刪掉一些對performance幫助不大的features
-可以再加item price 滯後!!!
+可以再加item price 滯後!!!(很難用)
 
 ###資料前處理  
 1.刪掉outlier
@@ -28,7 +33,7 @@
 ###前33個月資料放進XGboost Training 
 model參數
 觀察各features importance 把importance較小的feature刪掉減少資料前處理的時間
-圖*2+result+importance
+圖*2+result(training+kaggle結果)+importance
 
 ###Test (submission.csv)  
 對第35個月做prediction,並把結果輸出 submission.csv
