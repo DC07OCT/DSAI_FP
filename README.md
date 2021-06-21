@@ -26,12 +26,6 @@ dataset + input_data.csv+model+submission.csv
 
 ## 過程
 
-### Trail and error  
-* 增加不同滯後shift  
-* 調模型參數(sampling 和 early_stop_rounds)  
-* 藉由importance 刪掉一些對performance幫助不大的features  
-可以再加item price 滯後!!!(很難用)(item_price 對模型訓練有幫助 但第34個月沒有這筆資料所以test時 ˋ準確度會大跑掉)
-
 ### 資料前處理   
 1.刪掉outlier  
 2.把shop_name看似同一間的資料,統一成同一間shop    
@@ -46,7 +40,14 @@ model參數
 
 ### Test (得到submission.csv)    
 對第35個月做prediction,並把結果輸出 submission.csv  
-圖*1
+圖*1  
+
+### Trail and error  
+* 增加不同滯後shift  
+* 調模型參數(sampling 和 early_stop_rounds)  
+* 藉由importance 刪掉一些對performance幫助不大的features  
+
+
   
 ### 詳細內容請看[google Doc]()
 
