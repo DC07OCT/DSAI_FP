@@ -3,8 +3,9 @@
 ### [google doc(詳細過程)]()
 
 ##  如何執行  
-### 把資料集放進來  (六個檔案) 
-dataset + input_data.csv+model+submission.csv
+### 下載Kaggel資料集  
+https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data  
+
 ### 建環境(pipenv)  
 在 cmd中執行  
 
