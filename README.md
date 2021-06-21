@@ -40,7 +40,7 @@ model參數
 Validation Result
 ![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/result_1.png)  
 
-觀察各features importance 把importance較小的feature刪掉減少資料前處理的時間   
+觀察各features importance,把importance較小的feature刪掉,減少資料前處理的時間   
 ![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/importance.png)  
 
 ### Test (得到submission.csv)    
