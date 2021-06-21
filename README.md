@@ -6,7 +6,7 @@
 ### 下載Kaggel資料集  
 https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data  
 準備成   
-![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/prepare.png)
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/)
 ### 建環境(pipenv)  
 在 cmd中執行  
 
