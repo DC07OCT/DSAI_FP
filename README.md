@@ -35,12 +35,17 @@ dataset + input_data.csv+model+submission.csv
 
 ### 前33個月資料放進XGboost Training  
 model參數   
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/model_1.png)  
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/model_2.png)  
+Validation Result
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/result_1.png)  
+
 觀察各features importance 把importance較小的feature刪掉減少資料前處理的時間   
-圖*2+result(training+kaggle結果)+importance
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/importance.png)  
 
 ### Test (得到submission.csv)    
 對第35個月做prediction,並把結果輸出 submission.csv  
-圖*1  
+![image](https://github.com/DC07OCT/DSAI_Final-Project/blob/main/Figures/result_2.png)  
 
 ### Trail and error  
 * 增加不同滯後shift  
