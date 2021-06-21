@@ -1,6 +1,6 @@
 # DSAI_FP(Kaggle Predict Future Sales)   
-### [google Slide 連結(Presentatio用)]() 
-### [google doc(詳細過程)]()
+### [google Slide 連結(Presentation用)](https://docs.google.com/presentation/d/1as8rI73T3gprqfWMLaZYT08saAlG_JB9HK06ZM1LIZ0/edit?usp=sharing) 
+### [google doc(詳細過程)](https://drive.google.com/file/d/16GHQbTxprT90t_UXaKu67YR6xLcOGU1Y/view?usp=sharing)
 
 ##  如何執行  
 ### 下載Kaggel資料集  
@@ -56,7 +56,7 @@ Validation Result
 
 
   
-### 詳細內容請看[google Doc]()
+### 詳細內容請看[google Doc](https://drive.google.com/file/d/16GHQbTxprT90t_UXaKu67YR6xLcOGU1Y/view?usp=sharing)
 
 ## 參考資料  
 
