@@ -5,11 +5,7 @@ import numpy as np
 
 path=os.getcwd()
 data_train=pd.read_csv(path+'/input_dataframe.csv')
-print('start',time.ctime())#刪掉
 
-# #處理price做minmax normalize 刪掉
-# tar=data_train['item_price_meandiff']
-# data_train['item_price_meandiff']=(tar-tar.min())/(tar.max()-tar.min())
 
 #Train 值
 train_input = data_train[data_train.date_block_num < 33].drop(['item_cnt_month'], axis=1)
@@ -47,5 +43,3 @@ importances = importances[importances['importance'] > 0.01]
 print('imp',importances)
 #存模型
 model.save_model('XGBr.model')
-
-print('End',time.ctime())
