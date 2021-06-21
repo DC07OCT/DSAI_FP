@@ -141,10 +141,6 @@ holiday_dict = {0: 6,
                 11: 4}
 data_train['holidays_in_month'] = data_train['month'].map(holiday_dict)
 
-# #增加特徵(item_price)
-# group = data_train.groupby(['shop_id','item_id'])['item_price'].mean().rename('item_price_mean').reset_index()#按月份 分'item_id' 算'item_cnt_month'的mean
-# data_train = pd.merge(data_train, group, on=['shop_id','item_id'], how='left')#對應'date_block_num', 'item_id' 新增欄'item_month_mean'資訊
-# data_train['item_price_meandiff']=data_train['item_price']-data_train['item_price_mean']
 
 #生成滯後特徵(單純把item_cnt_month 做shift)
 data_train = generate_shift(data_train, [1,2,3,4,5], 'item_cnt_month')
@@ -186,58 +182,3 @@ data_train = fill_nan(data_train)
 #存DF
 data_train.to_csv('input_dataframe.csv', index=False)
 
-#
-# print('start',time.ctime())
-#
-# #Train 值
-# train_input = data_train[data_train.date_block_num < 33].drop(['item_cnt_month'], axis=1)
-# #Train label
-# train_label = data_train[data_train.date_block_num < 33]['item_cnt_month']
-#
-# #Validation 值
-# val_input = data_train[data_train.date_block_num == 33].drop(['item_cnt_month'], axis=1)
-# #Validation label
-# val_label = data_train[data_train.date_block_num == 33]['item_cnt_month']
-#
-# #Test值
-# test_input = data_train[data_train.date_block_num == 34].drop(['item_cnt_month'], axis=1)
-#
-# from xgboost import XGBRegressor
-# #設定模型參數
-# param=dict(n_estimators=3000,
-#                      max_depth=10,
-#                      colsample_bytree=0.7,
-#                      subsample=0.7,
-#                      learning_rate=0.01
-#
-#            )
-# model = XGBRegressor(**param)
-#
-# #訓練模型
-# model.fit(train_input.values, train_label.values,
-#           eval_metric="rmse",
-#           eval_set=[(train_input.values, train_label.values), (val_input.values, val_label.values)],
-#           verbose=True,
-#           early_stopping_rounds=50)#early_stopping_rounds is recommended to use 10% of your total iterations
-# #存模型
-# model.save_model('XGBr.model')
-#
-# #Predict結果
-# y_pred = model.predict(test_input.values)
-# print(y_pred)
-# print('End',time.ctime())
-# # #特徵重要性
-# # importances = pd.DataFrame({'feature':data_train.drop('item_cnt_month', axis = 1).columns,'importance':np.round(model.feature_importances_,3)})
-# # importances = importances.sort_values('importance',ascending=False).set_index('feature')
-# # importances = importances[importances['importance'] > 0.01]
-# # print('imp',importances)
-# # importances.plot(kind='bar',
-# #                  title = 'Feature Importance',
-# #                  figsize = (8,6),
-# #                  grid= 'both')
-# # plot_feature_importance(np.round(model.feature_importances_,3),data_train.drop('item_cnt_month', axis = 1).columns,'XG BOOST')
-#
-# #存csv
-# submission['item_cnt_month'] = y_pred
-# #print(y_pred)
-# submission.to_csv('submission.csv', index=False)
